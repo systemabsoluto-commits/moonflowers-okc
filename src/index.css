@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-night-950: #04020a;
+  --color-night-900: #090612;
+  --color-night-800: #110c20;
+  --color-night-700: #1a1330;
+  --color-night-600: #261c42;
+  --color-night-500: #362a58;
+
+  --color-moon-50: #fdfbf7;
+  --color-moon-100: #f7f1e6;
+  --color-moon-200: #ece0cb;
+  --color-moon-300: #ddc9a6;
+  --color-moon-400: #c9a978;
+
+  --color-bloom-400: #f2a7b3;
+  --color-bloom-500: #e88394;
+  --color-bloom-600: #d4637a;
+
+  --color-leaf-500: #5f8a6b;
+  --color-leaf-600: #4a6f56;
+
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-moon-50 font-sans text-night-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-bloom-500/30 text-night-900;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-accent,
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-night-900 text-moon-50 hover:bg-night-800 focus-visible:outline-night-900;
+  }
+
+  .btn-accent {
+    @apply bg-bloom-500 text-night-950 hover:bg-bloom-400 focus-visible:outline-bloom-500;
+  }
+
+  .btn-outline {
+    @apply border border-night-900/20 text-night-900 hover:border-night-900/40 hover:bg-night-900/5 focus-visible:outline-night-900;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold tracking-[0.28em] text-bloom-600 uppercase;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-2xl bg-white shadow-[0_1px_2px_rgba(13,10,23,0.04),0_12px_32px_-16px_rgba(13,10,23,0.18)] transition-shadow duration-300 hover:shadow-[0_1px_2px_rgba(13,10,23,0.05),0_20px_44px_-20px_rgba(13,10,23,0.28)];
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-night-900/15 bg-white px-4 py-3 text-sm text-night-900 outline-none transition-colors placeholder:text-night-900/35 focus:border-night-900/50;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
