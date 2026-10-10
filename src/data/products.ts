@@ -294,7 +294,7 @@ export const products: Product[] = [
     price: 80,
     categorySlug: "anniversary",
     addOns: giftAddOns,
-    image: photo("rose-eleganc-long-stem-red-roses"),
+    image: photo("rose-elegance-long-stem-red-roses"),
     description:
       "A measured bunch of long stem red roses, wrapped clean for an everyday anniversary moment.",
     badge: "Anniversary",
