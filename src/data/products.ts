@@ -34,7 +34,7 @@ export type Product = {
 const img = (id: string, w = 800) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
-const photo = (name: string) => `/products/${name}.jpg`;
+const photo = (name: string) => `${import.meta.env.BASE_URL}products/${name}.jpg`;
 
 const giftAddOns: ProductAddOn[] = [
   {
@@ -42,14 +42,14 @@ const giftAddOns: ProductAddOn[] = [
     name: "Medium teddy bear",
     price: 20,
     description: "A soft plush bear to make the gift extra special.",
-    image: "/addons/teddy-bear.jpg",
+    image: `${import.meta.env.BASE_URL}addons/teddy-bear.jpg`,
   },
   {
     id: "smiley-balloon",
     name: "Smiley face balloon",
     price: 5,
     description: "A cheerful smiley balloon tied to the bouquet.",
-    image: "/addons/smiley-balloon.png",
+    image: `${import.meta.env.BASE_URL}addons/smiley-balloon.png`,
   },
 ];
 
