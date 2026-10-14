@@ -36,6 +36,8 @@ const img = (id: string, w = 800) =>
 
 const photo = (name: string) => `${import.meta.env.BASE_URL}products/${name}.jpg`;
 
+const boxImg = (name: string) => `${import.meta.env.BASE_URL}products/box/${name}.png`;
+
 const giftAddOns: ProductAddOn[] = [
   {
     id: "teddy-bear",
@@ -1476,6 +1478,191 @@ export const products: Product[] = [
     badge: "Premium",
     rating: 5,
     reviews: 19,
+  },
+  {
+    slug: "beauty-bloom-box",
+    name: "Beauty Bloom Box",
+    price: 200,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Beauty Bloom"),
+    description:
+      "A romantic gathering of roses and hydrangea, arranged full and low in the keepsake box. The classic box-flower look, done right.",
+    badge: "Box Flowers",
+    stems: "Roses and hydrangea",
+    rating: 5,
+    reviews: 18,
+  },
+  {
+    slug: "autumn-harvest-box",
+    name: "Autumn Harvest Box",
+    price: 200,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Autumn"),
+    description:
+      "Warm amber, rust and cream blooms that bring the feel of a fall table into a gift box that stays pretty for days.",
+    badge: "Box Flowers",
+    stems: "Warm seasonal blooms",
+    rating: 4.9,
+    reviews: 11,
+  },
+  {
+    slug: "cutie-bloom-box",
+    name: "Cutie Bloom Box",
+    price: 140,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Cutie"),
+    description:
+      "A compact, sweet little box of bright blooms — small enough for a desk, pretty enough for the front table.",
+    stems: "Bright mixed blooms",
+    rating: 5,
+    reviews: 14,
+  },
+  {
+    slug: "heart-of-roses-box",
+    name: "Heart of Roses Box",
+    price: 180,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Heart of roses"),
+    description:
+      "Red roses arranged into a heart, set in the box with a card. The gesture that says everything without a single word.",
+    badge: "Romantic",
+    stems: "Red roses",
+    rating: 5,
+    reviews: 16,
+  },
+  {
+    slug: "heart-bloom-box",
+    name: "Heart Bloom Box",
+    price: 160,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Heart"),
+    description:
+      "A heart-shaped arrangement of soft pastel blooms, romantic without the red — perfect for anniversaries and just-because.",
+    badge: "Box Flowers",
+    stems: "Pastel mixed blooms",
+    rating: 4.9,
+    reviews: 12,
+  },
+  {
+    slug: "jade-bloom-box",
+    name: "Jade Bloom Box",
+    price: 200,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Jade"),
+    description:
+      "A fresh green and white arrangement that feels calm and clean — the box-flower pick for new homes and new beginnings.",
+    stems: "White and green blooms",
+    rating: 5,
+    reviews: 9,
+  },
+  {
+    slug: "bloom-mind-box",
+    name: "Bloom Mind Box",
+    price: 75,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Mind"),
+    description:
+      "Soft, soothing tones in a shapes-that-rest arrangement, made for reach-out moments and feeling-better-soon wishes.",
+    badge: "Get Well",
+    stems: "Calming soft blooms",
+    rating: 4.8,
+    reviews: 13,
+    variants: [
+      {
+        id: "classic",
+        name: "Classic",
+        price: 75,
+        description: "A soft, calming arrangement in the box.",
+      },
+      {
+        id: "deluxe",
+        name: "Deluxe",
+        price: 90,
+        description: "A fuller calming arrangement.",
+      },
+    ],
+  },
+  {
+    slug: "rose-dome-box",
+    name: "Rose Dome Box",
+    price: 200,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom rose dome"),
+    description:
+      "A lush dome of roses under the lid, the showpiece of the box-flower range. Open it slowly — it's the moment.",
+    badge: "Premium",
+    stems: "Rose dome",
+    rating: 5,
+    reviews: 20,
+  },
+  {
+    slug: "spring-garden-box",
+    name: "Spring Garden Box",
+    price: 95,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Bloom Spring Garden"),
+    description:
+      "A garden-in-a-box of spring color — tulips, stock and spray roses in the palette that started the season.",
+    badge: "Box Flowers",
+    stems: "Spring garden mix",
+    rating: 5,
+    reviews: 15,
+    variants: [
+      {
+        id: "classic",
+        name: "Classic",
+        price: 95,
+        description: "A spring garden arrangement in the box.",
+      },
+      {
+        id: "deluxe",
+        name: "Deluxe",
+        price: 115,
+        description: "A fuller spring garden in the box.",
+      },
+      {
+        id: "premium",
+        name: "Premium",
+        price: 140,
+        description: "A generous spring garden box.",
+      },
+    ],
+  },
+  {
+    slug: "golden-bloom-box",
+    name: "Golden Bloom Box",
+    price: 200,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Golden Bloom"),
+    description:
+      "Sunny yellows and warm golds that brighten a room the second the lid lifts. For birthdays, promotions and bright days.",
+    stems: "Yellow and gold blooms",
+    rating: 4.9,
+    reviews: 11,
+  },
+  {
+    slug: "mini-bloom-box",
+    name: "Mini Bloom Box",
+    price: 70,
+    categorySlug: "box-flowers",
+    addOns: giftAddOns,
+    image: boxImg("Mini Bloom"),
+    description:
+      "Our smallest box, packed with the same care. Small in size, exactly the right amount of flowers for a desk or a note.",
+    badge: "Mini",
+    stems: "Compact mixed blooms",
+    rating: 5,
+    reviews: 17,
   },
 ];
 

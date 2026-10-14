@@ -10,6 +10,7 @@ import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
 import FaqPage from "@/pages/FaqPage";
 import SympathyPage from "@/pages/SympathyPage";
+import BoxFlowersPage from "@/pages/BoxFlowersPage";
 import { OccasionCategoryPage } from "@/pages/CategoryPages";
 import NotFoundPage from "@/pages/NotFoundPage";
 import { site } from "@/data/site";
@@ -21,6 +22,8 @@ export default function App() {
     const map: Record<string, string> = {
       "/": `${site.name} | Flower Delivery in Oklahoma City`,
       "/occasions": `Occasions | ${site.name}`,
+      "/occasions/:slug": `Occasions | ${site.name}`,
+      "/box-flowers": `Box Flowers | ${site.name}`,
       "/sympathy": `Funeral & Sympathy Flowers | ${site.name}`,
       "/about": `About | ${site.name}`,
       "/contact": `Contact | ${site.name}`,
@@ -38,6 +41,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/occasions" element={<OccasionsPage />} />
           <Route path="/occasions/:slug" element={<OccasionCategoryPage />} />
+          <Route path="/box-flowers" element={<BoxFlowersPage />} />
           <Route path="/sympathy" element={<SympathyPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />

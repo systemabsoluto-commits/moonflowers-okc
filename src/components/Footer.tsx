@@ -52,6 +52,7 @@ export default function Footer() {
         </FooterCol>
 
         <FooterCol title="Shop">
+          <FooterLink to="/box-flowers">Box flowers</FooterLink>
           <FooterLink to="/sympathy">Funeral & sympathy</FooterLink>
           <FooterLink to="/occasions/wedding">Wedding</FooterLink>
           <FooterLink to="/occasions/quinceanera">Quinceañera</FooterLink>

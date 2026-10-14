@@ -6,6 +6,7 @@ import { site } from "@/data/site";
 
 const links = [
   { to: "/occasions", label: "Occasions", children: occasionCategories },
+  { to: "/box-flowers", label: "Box Flowers" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
   { to: "/faq", label: "FAQ" },
